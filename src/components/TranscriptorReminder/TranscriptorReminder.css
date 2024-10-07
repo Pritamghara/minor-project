@@ -1,0 +1,48 @@
+
+
+.transcriptor-reminder-main{
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border:1px solid rgb(232, 223, 223);
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    gap:20px;
+}
+
+.transcriptor-reminder-card{
+   
+    align-items: center;
+   
+}
+
+.transcriptor-reminder-card__title{
+   
+    
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    display: inline-block;
+    
+}
+.transcriptor-reminder-card__titleIcon{
+   padding-top:50px;
+}
+
+.transcriptor-reminder-card__description{
+    color:rgb(149, 144, 144);
+
+
+}
+
+.reminder-button{
+    max-width:20%;
+    padding: 10px 15px;
+    border-radius: 4px;
+    background-color:  #007BFF;
+    color:wheat;
+    border: none;
+    cursor:pointer
+}

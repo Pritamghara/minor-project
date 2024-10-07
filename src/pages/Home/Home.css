@@ -1,0 +1,41 @@
+
+
+.homeMain {
+    padding: 200px 300px 50px; 
+}
+
+
+
+.titleCard__title{
+    font-size: xx-large;
+    font-weight: bolder;
+   
+}
+
+.titleCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+}
+.titleCard__description{
+    color:rgb(149, 144, 144);
+    text-align: center;
+    font-size: large;
+    line-height: 25px;
+}
+
+.transcripor-description{
+    margin-top: 100px;
+}
+.transcripor-description__title{
+    color:#0b2d51;
+    font-size: 48px;
+    font-weight: bolder;
+    
+}
+
+.transcripor-description__description{
+    color:rgb(149, 144, 144);
+    line-height: 25px;
+}

@@ -1,0 +1,10 @@
+.transcriptSearchBar{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width:100%;
+    padding: 0 40px;
+    
+    display: flex;
+
+}

@@ -2,8 +2,22 @@
 
 import { RouterProvider } from "react-router-dom"
 
-import {router} from './routes/routes.ts'
 
+
+import { createBrowserRouter } from "react-router-dom";
+import Home from './pages/Home/Home'
+import Login from "./pages/Login/Login";
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />, 
+  },
+  {
+    path:'/login',
+    element:<Login/>
+  }
+]);
 
 const App = () => {
   return (

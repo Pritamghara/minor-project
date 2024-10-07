@@ -1,0 +1,36 @@
+
+
+.transcriptor-additional-features-main{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+}
+
+.transcriptor-additional-features-cards{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+   
+}
+
+.transcriptor-additional-features-card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+    border:1px solid rgb(232, 223, 223);
+    padding: 20px;
+    border-radius: 10px;
+}
+.transcriptor-additional-features-card__title{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.transcriptor-additional-features-card__description{
+    color:rgb(149, 144, 144);
+
+
+}
