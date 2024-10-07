@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import TranscriptorAdditionalFeatures from '../../components/TranscriptorAdditionalFeatures/TranscriptorAdditionalFeatures'
 import TranscriptorFeatures from '../../components/TranscriptorFeatures/TranscriptorFeatures'
 import TranscriptorReminder from '../../components/TranscriptorReminder/TranscriptorReminder'
@@ -5,8 +6,25 @@ import TranscriptorRunSteps from '../../components/TranscriptorRunSteps/Transcri
 import TranscriptSearchBar from '../../components/TranscriptSearchBar/TranscriptSearchBar'
 import Card from '../../ReusableComponents/Card/Card'
 import './Home.css'
+import { YoutubeTranscript, TranscriptResponse } from 'youtube-transcript'; 
 
 const Home = () => {
+    const [transcript, setTranscript] = useState<TranscriptResponse>([]);
+    const videoId = 'https://www.youtube.com/watch?v=cQxw6aZ2c6s'; 
+
+    useEffect(() => {
+        const fetchTranscript = async () => {
+            try {
+                const transcriptData = await YoutubeTranscript.fetchTranscript(videoId);
+                setTranscript(transcriptData);
+            } catch (error) {
+                console.error('Error fetching transcript:', error);
+            }
+        };
+
+        fetchTranscript();
+    }, [videoId]);
+    
 
     return (
         <div className='homeMain'>
