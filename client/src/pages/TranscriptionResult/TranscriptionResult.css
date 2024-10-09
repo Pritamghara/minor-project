@@ -1,0 +1,25 @@
+
+
+.transcriptionResultMain{
+    display: flex;
+    flex-direction: column;
+    padding:50px;
+    gap:30px;
+
+}
+
+.transcriptionSummary {
+    border: 1px solid rgb(210, 204, 204);
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 30px;
+    background-color: rgb(214, 203, 189);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color:rgb(100, 99, 101)
+}
+
+.transcriptionSummary:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(0, 0, 0, 0.15);
+}

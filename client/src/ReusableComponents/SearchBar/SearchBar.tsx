@@ -9,18 +9,14 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
     setQuery(event.target.value);
   };
 
-  const handleSearch = () => {
-    if (query.trim()) {
-      onSearch(query);
-      setQuery(''); 
-    }
-  };
+  const handleSearch=()=>{
 
-  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter') {
-      handleSearch();
-    }
-  };
+    onSearch(query)
+  }
+
+  
+
+ 
 
   return (
     <div className="search-bar">
@@ -28,7 +24,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
         type="text"
         value={query}
         onChange={handleChange}
-        onKeyPress={handleKeyPress}
+       
         placeholder="Search..."
         className="search-input"
       />

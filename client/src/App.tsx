@@ -16,12 +16,21 @@ export const router = createBrowserRouter([
   {
     path:'/login',
     element:<Login/>
+  },
+  {
+    path:'/transcription',
+    element:<TranscriptionResult/>
   }
 ]);
+import {store} from '../src/redux/app/store'
 
+import { Provider } from "react-redux";
+import TranscriptionResult from "./pages/TranscriptionResult/TranscriptionResult";
 const App = () => {
   return (
+    <Provider store={store}>
     <RouterProvider router={router} />
+      </Provider>
   )
 }
 

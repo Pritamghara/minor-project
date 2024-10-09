@@ -6,24 +6,18 @@ import TranscriptorRunSteps from '../../components/TranscriptorRunSteps/Transcri
 import TranscriptSearchBar from '../../components/TranscriptSearchBar/TranscriptSearchBar'
 import Card from '../../ReusableComponents/Card/Card'
 import './Home.css'
-import { YoutubeTranscript, TranscriptResponse } from 'youtube-transcript'; 
+import {  TranscriptResponse } from 'youtube-transcript'; 
+
+
 
 const Home = () => {
-    const [transcript, setTranscript] = useState<TranscriptResponse>([]);
-    const videoId = 'https://www.youtube.com/watch?v=cQxw6aZ2c6s'; 
+    const [transcript, setTranscript] = useState<TranscriptResponse[]>([]);
+    
 
-    useEffect(() => {
-        const fetchTranscript = async () => {
-            try {
-                const transcriptData = await YoutubeTranscript.fetchTranscript(videoId);
-                setTranscript(transcriptData);
-            } catch (error) {
-                console.error('Error fetching transcript:', error);
-            }
-        };
 
-        fetchTranscript();
-    }, [videoId]);
+    
+
+   
     
 
     return (
