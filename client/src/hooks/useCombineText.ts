@@ -1,36 +1,36 @@
-
-import { useState, useEffect } from 'react';
-import { useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/app/store';
-import { TranscriptItemType } from '../redux/features/youtubeTranscript/Types';
 
 const useCombinedText = () => {
-  const transcriptionArray = useSelector((state: RootState) => state.youtubeTranscript.transcript);
+  
+  const summaryText = useSelector((state: RootState) => state.youtubeTranscript.transcript.summary);
 
-  // Combine all text into one string
-  const combinedText = useMemo(() => {
-    return transcriptionArray.map((item: TranscriptItemType) => item.text).join(' ');
-  }, [transcriptionArray]);
+ 
+  const combinedText = useMemo(() => summaryText || '', [summaryText]);
 
-  // State to hold the gradually revealed text
+
   const [displayedText, setDisplayedText] = useState('');
+ 
+  const [isTextFullyDisplayed, setIsTextFullyDisplayed] = useState(false);
 
-  // Effect to gradually add text to the div
+ 
   useEffect(() => {
     let currentIndex = 0;
     const interval = setInterval(() => {
       setDisplayedText((prevText) => prevText + combinedText[currentIndex]);
       currentIndex += 1;
+
       if (currentIndex === combinedText.length) {
         clearInterval(interval);
+        setIsTextFullyDisplayed(true); 
       }
-    }, 50); // Adjust the speed (50ms delay between characters)
+    }, 50); 
 
-    return () => clearInterval(interval); // Clean up interval on component unmount
+    return () => clearInterval(interval); 
   }, [combinedText]);
 
-  return { combinedText: displayedText }; // Return the progressively revealed text
+  return { combinedText: displayedText, isTextFullyDisplayed };
 };
 
 export default useCombinedText;

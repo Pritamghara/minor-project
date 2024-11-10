@@ -16,9 +16,8 @@ const TranscriptSearchBar = () => {
 
     
     const handleSearch=async(videoUrl:string)=>{
-      console.log("videoUrl",videoUrl);
-        const id = videoIdExtractor(videoUrl) as string;
-        console.log("id",id);
+        
+
         try {
           
           const response=await dispatch(fetchYoutubeTranscript(videoUrl))
@@ -37,7 +36,7 @@ const TranscriptSearchBar = () => {
     
   return (
    
-   <div  className="transcriptSearchBar">
+   <div className="transcriptSearchBar">
 
     <SearchBar onSearch={handleSearch}/>
    </div>
