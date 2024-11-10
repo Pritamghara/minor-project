@@ -16,11 +16,12 @@ const TranscriptSearchBar = () => {
 
     
     const handleSearch=async(videoUrl:string)=>{
+      console.log("videoUrl",videoUrl);
         const id = videoIdExtractor(videoUrl) as string;
-
+        console.log("id",id);
         try {
           
-          const response=await dispatch(fetchYoutubeTranscript(id))
+          const response=await dispatch(fetchYoutubeTranscript(videoUrl))
 
           if(response){
 
