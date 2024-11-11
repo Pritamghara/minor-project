@@ -7,7 +7,7 @@ const useCombinedText = () => {
   const summaryText = useSelector((state: RootState) => state.youtubeTranscript.transcript.summary);
 
  
-  const combinedText = useMemo(() => summaryText || '', [summaryText]);
+  const combinedText = useMemo(() => summaryText || 'lorem ipsum how are you u know me know and i can cathc you ohk got it', [summaryText]);
 
 
   const [displayedText, setDisplayedText] = useState('');

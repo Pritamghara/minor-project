@@ -2,6 +2,7 @@ import useCombinedText from '../../hooks/useCombineText';
 import './TranscriptionResult.css'
 const TranscriptionResult = () => {
   const { combinedText } = useCombinedText();
+ 
 
   return (
 
@@ -9,7 +10,14 @@ const TranscriptionResult = () => {
 
         <h1>Transcription Summary</h1>
         
-        <div className='transcriptionSummary'>{combinedText}</div>
+      {
+        combinedText!=='' ? 
+
+
+        <div className='transcriptionSummary'>{combinedText}</div>:
+        <span>No Text Found</span>
+      }
+
     </div>
   );
 };
