@@ -23,3 +23,55 @@
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(0, 0, 0, 0.15);
 }
+
+
+.transcriptionHeader{
+    display: flex;
+    gap:40px;
+    align-items: center;
+}
+.transcriptorActions{
+    display: flex;
+    gap:20px;
+    align-items: center;
+   
+}
+.transcriptorActionButtons {
+    background-color:rgb(214, 211, 211) ;
+    border-radius: 50%;
+    width:40px;
+    padding: 2px 8px;
+    color: #b92e2e; 
+    height:40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+    
+}
+.transcriptorActionButtons.disabled{
+    background-color: #9a9494;
+
+}
+.transcriptorActionButton2{
+    background-color:rgb(214, 211, 211) ;
+    border-radius: 50%;
+    width:40px;
+    padding: 2px 10px;
+    color: #b92e2e; 
+    height:40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.transcriptorActionButton2.disabled{
+    background-color: #9a9494;
+
+}
+
+.transcriptorActionButtons svg{
+    height: 100%;
+   
+   
+
+}
