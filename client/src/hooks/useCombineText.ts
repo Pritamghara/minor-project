@@ -25,7 +25,7 @@ const useCombinedText = () => {
         clearInterval(interval);
         setIsTextFullyDisplayed(true); 
       }
-    }, 50); 
+    }, 30); 
 
     return () => clearInterval(interval); 
   }, [combinedText]);

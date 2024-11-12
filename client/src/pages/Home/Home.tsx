@@ -29,7 +29,7 @@ const Home = () => {
 
         <TranscriptSearchBar/>
         <TranscriptorRunSteps/>
-        <Card className='transcripor-description' title='+ 100 Million Minutes of Videos Summarized' description='Harnessing the power of AI we ve summarized millions of videos unlocking unparalleled insights and empowering individuals with knowledge like never before.' />
+        {/* <Card className='transcripor-description' title='+ 100 Million Minutes of Videos Summarized' description='Harnessing the power of AI we ve summarized millions of videos unlocking unparalleled insights and empowering individuals with knowledge like never before.' /> */}
 
         <TranscriptorFeatures/>
         <TranscriptorAdditionalFeatures/>

@@ -64,6 +64,27 @@
 
 }
 
+.transcriptorActionButtonOff{
+    background-color:rgb(214, 211, 211) ;
+    border-radius: 50%;
+    width:40px;
+    padding: 2px 10px;
+    color: #b92e2e; 
+    height:40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.transcriptorActionButtonOff svg{
+    height:100% !important;
+}
+
+.transcriptorActionButtonOff.disabled{
+    background-color: #9a9494;
+
+}
+
 .transcriptorActionButton2.disabled{
     background-color: #9a9494;
 
